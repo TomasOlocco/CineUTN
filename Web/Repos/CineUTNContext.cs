@@ -21,6 +21,14 @@ public partial class CineUTNContext : DbContext
 
     public virtual DbSet<Sonido> Sonidos { get; set; }
 
+    public virtual DbSet<Subtitulo> Subtitulo { get; set; }
+
+    public virtual DbSet<Tipo> Tipo { get; set; }
+
+    public virtual DbSet<Pelicula> Pelicula { get; set; }
+
+
+
     //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     //    => optionsBuilder.UseSqlServer("name=conexion");
 

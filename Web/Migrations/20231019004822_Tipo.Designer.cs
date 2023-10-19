@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Web.Repos;
 
@@ -11,9 +12,11 @@ using Web.Repos;
 namespace Web.Migrations
 {
     [DbContext(typeof(CineUTNContext))]
-    partial class CineUTNContextModelSnapshot : ModelSnapshot
+    [Migration("20231019004822_Tipo")]
+    partial class Tipo
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,54 +24,6 @@ namespace Web.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("Web.Models.Pelicula", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("ID");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int?>("Clasificacion")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Descripcion")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<int?>("Duracion")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime?>("FechaEstreno")
-                        .HasColumnType("smalldatetime");
-
-                    b.Property<DateTime?>("FechaRegistro")
-                        .HasColumnType("smalldatetime");
-
-                    b.Property<int?>("GeneroRefId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ImagemPelicula")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("SubtituloRefId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("TipoRefId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("GeneroRefId");
-
-                    b.HasIndex("SubtituloRefId");
-
-                    b.HasIndex("TipoRefId");
-
-                    b.ToTable("Pelicula");
-                });
 
             modelBuilder.Entity("Web.Models.Sonido", b =>
                 {
@@ -156,27 +111,6 @@ namespace Web.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Genero");
-                });
-
-            modelBuilder.Entity("Web.Models.Pelicula", b =>
-                {
-                    b.HasOne("Web.Repos.Models.Genero", "Genero")
-                        .WithMany()
-                        .HasForeignKey("GeneroRefId");
-
-                    b.HasOne("Web.Models.Subtitulo", "Subtitulo")
-                        .WithMany()
-                        .HasForeignKey("SubtituloRefId");
-
-                    b.HasOne("Web.Models.Tipo", "Tipo")
-                        .WithMany()
-                        .HasForeignKey("TipoRefId");
-
-                    b.Navigation("Genero");
-
-                    b.Navigation("Subtitulo");
-
-                    b.Navigation("Tipo");
                 });
 #pragma warning restore 612, 618
         }
