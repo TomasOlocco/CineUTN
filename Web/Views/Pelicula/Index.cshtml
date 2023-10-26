@@ -46,10 +46,15 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Descripcion)
+                    <img src="~/images/@item.ImagemPelicula"
+                         class="rounded-start"
+                         height="150" width="150"
+                     asp-append-version="true" />
+                    <br>
+                    @item.Descripcion
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ImagemPelicula)
+                @Html.DisplayFor(modelItem => item.Descripcion)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Duracion)

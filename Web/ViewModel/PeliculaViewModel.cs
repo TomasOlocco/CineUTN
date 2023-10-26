@@ -1,34 +1,17 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using Web.Repos.Models;
+using Web.Models;
 
-namespace Web.Models
+namespace Web.ViewModel
 {
-    [Table("Pelicula")]
-    public class Pelicula
+    public class PeliculaViewModel
     {
-        [Key]
-        [Column("ID")]
         public int Id { get; set; }
 
-
+        [Required(ErrorMessage = "Por favor, ingresar la descripción.")]
         [Display(Name = "Descripción")]
-        [StringLength(50)]
         public string? Descripcion { get; set; }
-
-        [NotMapped]
-        public string DescripcionTipo
-        {
-            get
-            {
-                return string.Format("{0} - {1}", Descripcion, Tipo.Descripcion);
-            }
-        }
-
-
-        [Display(Name = "Imagen")]
-        public string? ImagemPelicula { get; set; }
 
         [Display(Name = "Duración")]
         public int? Duracion { get; set; }
@@ -38,12 +21,12 @@ namespace Web.Models
 
         [Display(Name = "Género")]
         public int? GeneroRefId { get; set; }
-        [ForeignKey("GeneroRefId")]
+
         public virtual Genero? Genero { get; set; }
 
         [Display(Name = "Tipo")]
         public int? TipoRefId { get; set; }
-        [ForeignKey("TipoRefId")]
+
         public virtual Tipo? Tipo { get; set; }
 
         [Display(Name = "Subtitulo")]
@@ -52,15 +35,17 @@ namespace Web.Models
         public virtual Subtitulo? Subtitulo { get; set; }
 
         [Display(Name = "Fecha Estreno")]
-        [Column(TypeName = "smalldatetime")]
-        [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = false)]
         public DateTime? FechaEstreno { get; set; }
 
         [Display(Name = "Fecha Registro")]
-        [Column(TypeName = "smalldatetime")]
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = false)]
         public DateTime? FechaRegistro { get; set; }
+
+        [Display(Name = "Imagem Pelicula")]
+        public IFormFile Imagem { get; set; }
+
+        [Display(Name = "Imagen")]
+        public string? ImagemPelicula { get; set; }
     }
 }

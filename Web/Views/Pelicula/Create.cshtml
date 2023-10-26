@@ -1,4 +1,5 @@
-﻿@model Web.Models.Pelicula
+﻿@model Web.ViewModel.PeliculaViewModel
+
 
 @{
     ViewData["Title"] = "Create";
@@ -10,7 +11,7 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create">
+            <form enctype="multipart/form-data" asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Descripcion" class="control-label"></label>
@@ -18,9 +19,12 @@
                 <span asp-validation-for="Descripcion" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ImagemPelicula" class="control-label"></label>
-                <input asp-for="ImagemPelicula" class="form-control" />
-                <span asp-validation-for="ImagemPelicula" class="text-danger"></span>
+                <label asp-for="Imagem" class="control-label"></label>
+                <div class="custom-file">
+                        <input asp-for="Imagem" class="custom-file-input" id="customFile">
+                    <label class="custom-file-label" for="customFile">Seleccione el archivo</label>
+                </div>
+                    <span asp-validation-for="Imagem" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Duracion" class="control-label"></label>
