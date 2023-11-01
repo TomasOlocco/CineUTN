@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mjds29s0OY587ubulwLKePwdxQynZnOwlm5pvJqSOaI=",
+  "Hash": "15H6B0XiM8qMHKwyARkWfVus32On46Z7df8sx3DVWMM=",
   "Source": "Web",
   "BasePath": "_content/Web",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Notebook\\source\\repos\\CineUTN\\Web\\wwwroot\\images\\b68b8766-d786-4eed-9618-4330fca3cec5_586.gif",
+      "SourceId": "Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Notebook\\source\\repos\\CineUTN\\Web\\wwwroot\\",
+      "BasePath": "_content/Web",
+      "RelativePath": "images/b68b8766-d786-4eed-9618-4330fca3cec5_586.gif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\b68b8766-d786-4eed-9618-4330fca3cec5_586.gif"
     },
     {
       "Identity": "C:\\Users\\Notebook\\source\\repos\\CineUTN\\Web\\wwwroot\\js\\site.js",
