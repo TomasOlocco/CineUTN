@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Notebook\\source\\repos\\CineUTN\\Web\\wwwroot\\images\\b68b8766-d786-4eed-9618-4330fca3cec5_586.gif",
+      "PackagePath": "staticwebassets\\images\\b68b8766-d786-4eed-9618-4330fca3cec5_586.gif"
+    },
+    {
       "Id": "C:\\Users\\Notebook\\source\\repos\\CineUTN\\Web\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
