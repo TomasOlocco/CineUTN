@@ -20,4 +20,4 @@ public partial class Genero
     [Column(TypeName = "smalldatetime")]
     public DateTime? FechaRegistro { get; set; }
 
-}
+}   

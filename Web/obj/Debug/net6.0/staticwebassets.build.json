@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "15H6B0XiM8qMHKwyARkWfVus32On46Z7df8sx3DVWMM=",
+  "Hash": "4InhMa0vJFXGEUtCj7jdum29ADEf3Zzjlny0uwjub2s=",
   "Source": "Web",
   "BasePath": "_content/Web",
   "Mode": "Default",
@@ -100,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\b68b8766-d786-4eed-9618-4330fca3cec5_586.gif"
+    },
+    {
+      "Identity": "C:\\Users\\Notebook\\source\\repos\\CineUTN\\Web\\wwwroot\\images\\f3ba767f-993e-4d0b-a3a7-1cb1fb1db58c_233.jpg",
+      "SourceId": "Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Notebook\\source\\repos\\CineUTN\\Web\\wwwroot\\",
+      "BasePath": "_content/Web",
+      "RelativePath": "images/f3ba767f-993e-4d0b-a3a7-1cb1fb1db58c_233.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\f3ba767f-993e-4d0b-a3a7-1cb1fb1db58c_233.jpg"
     },
     {
       "Identity": "C:\\Users\\Notebook\\source\\repos\\CineUTN\\Web\\wwwroot\\js\\site.js",
